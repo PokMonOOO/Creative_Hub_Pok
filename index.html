@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="default">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favcon.png" type="image/png">
+  <link rel="icon" href="favcon.png" sizes="32x32">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    </style>
+
+  <title>Pok - The Animation</title>
+</head>
+<body>
+  <div class="bg center"></div>
+  <div class="loader center">
+    <img src="./src/Taka.webp" class="medal-core taka" alt="">
+    <img src="./src/Tora.webp" class="medal-core tora" alt="">
+    <img src="./src/Batta.webp" class="medal-core batta" alt="">
+  </div>
+
+  <header>
+    <div class="header1">
+    <img src="./icon/logo.png" alt="logo" class="logo">
+    <nav>
+      <a href=""><h4 class="underline">ACCEUIL</h4></a>
+      <a href=""><h4 class="underline">INSPIRATION</h4></a>
+      <a href=""><h4 class="underline">RESSOURCE</h4></a>
+      <a href=""><h4 class="underline">FAQ</h4></a>
+    </nav>
+  </div>
+    <div class="header2 center">
+      <a href=""><h4 class="noir underline">SING UP</h4></a>
+      <a href=""><div class="login center"><h3>LOGIN</h3></div></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="bloc1 center">
+      <div class="bloc1z">
+        <div class="bloc1a"><h1>BOOSTE TA CRÉATIVITÉ AVEC LES MEILLEURES RESSOURCES</h1></div>
+        <div class="bloc1b"><h3>Templates, inspirations et communauté au service de ton talent.</h3></div>
+        <div class="bloc1c"><button onclick="window.location.href='';" class="bloc1c-button center"><h4>Explorer les ressources</h4></button></div>
+      </div>
+    </div>
+    <div class="bloc2 center">
+      <div class="bloc2z">
+        <div class="bloc2a"><img src="./icon/bloc2a.png" alt="bloc 2"></div>
+        <div class="bloc2b center"><h1>Tendances</h1></div>
+        <div class="bloc2c"><button onclick="window.location.href='';" class="bloc2c-button center"><h4>VOIR PLUS</h4></button></div>
+      </div>
+    </div>
+    <div class="bloc3 center">
+      <div class="bloc3z">
+        <div class="bloc3a"><h1>RESSOURCES GRATUITE</h1></div>
+        <div class="bloc3b">
+          <img src="./icon/bloc3b-1.png" alt="">
+          <img src="./icon/bloc3b-2.png" alt="">
+          <img src="./icon/bloc3b-3.png" alt="">
+        </div>
+        <div class="bloc3c"><button onclick="window.location.href='';" class="bloc3c-button center"><h4>Explorer les ressources</h4></button></div>
+      </div>
+    </div>
+    <div class="bloc4 center">
+      <div class="bloc4z">
+        <div class="bloc4a"><h1>Newsletter</h1></div>
+        <div class="bloc4b"><h3>Templates, inspirations et communauté au service de ton talent.</h3></div>
+        <div class="bloc4c center"><div class="bloc4c-1 center"><input placeholder="e-mail" type="text" class="newsletter_input">
+        <button onclick="clearInputAndPlaySound()"><h4>S’abonner</h4></button></div></div>
+        <script>
+          function clearInputAndPlaySound() {
+              const input = document.querySelector(".newsletter_input");
+              const sound = document.getElementById("sound");
+              
+              if (input.value.trim() === "") return; // Ne fait rien si l'input est vide
+              
+              input.value = "";
+              sound.currentTime = 0; // Remet le son au début
+              sound.play();
+          }
+  
+          document.addEventListener("DOMContentLoaded", function () {
+              const input = document.querySelector(".newsletter_input");
+  
+              input.addEventListener("keydown", function (event) {
+                  if (event.key === "Enter") {
+                      event.preventDefault(); // Empêche la soumission de formulaire si nécessaire
+                      clearInputAndPlaySound();
+                  }
+              });
+          });
+      </script>
+        <audio id="sound" src="./src/neyga.mp3" volume="30%"></audio>
+      </div>
+    </div>
+    <div class="bloc5"><div class="bloc5-filtre center">
+      <div class="bloc5z center">
+        <div class="bloc5a center"><h1>Interview Créateur</h1></div>
+        <div class="bloc5b center"><h3>Templates, inspirations et communauté au service de ton talent.</h3></div>
+        <div class="bloc5c center"><a href="" class="bloc5c-1 center"><h3>Lire l’interview</h3></a></div>
+      </div>
+    </div></div>
+  </main>
+
+  <footer class="center">
+    <div class="footer-filtre center">
+      <section>
+        <div><h2>CREATIVE HUB</h2></div>
+        <div class="footer2 center">
+          <div class="mentions center">
+          <a href=""><h4>Contact</h4></a><h4>|</h4>
+          <a href=""><h4>Mentions légales</h4></a><h4>|</h4>
+          <a href=""><h4>Politique de confidentialité</h4></a>
+        </div>
+        <div class="reseaux center">
+          <a href="" class="invert-hover"><img src="./icon/X.png" alt="X"></a>
+          <a href="" class="invert-hover"><img src="./icon/Instagram.png" alt="Instagram"></a>
+          <a href="" class="invert-hover"><img src="./icon/Facebook.png" alt="Facebook"></a>
+          <a href="" class="invert-hover"><img src="./icon/BeHance.png" alt="BeHance"></a>
+          <a href="" class="invert-hover"><img src="./icon/Basket.png" alt="Basket"></a>
+        </div>
+      </div>
+        <h4 class="copyright">© 2025 Creative Hub. Tous droits réservés.</h4>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
